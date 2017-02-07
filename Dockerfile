@@ -16,4 +16,4 @@ RUN /usr/local/bin/pip install virtualenv
 RUN yum install -y yum-utils && yum-config-manager --save --setopt=epel.skip_if_unavailable=true && yum install -y moreutils pwgen
 RUN rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm && yum -y install nginx
 
-RUN yum remove -y postgresql-devel libevent-devel gcc openssl-devel wget make && yum clean all
+RUN yum clean all
