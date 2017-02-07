@@ -1,0 +1,16 @@
+machine:
+  services:
+    - docker
+dependencies:
+  override:
+    - docker info
+test:
+  override:
+    - docker build -t philipsahli/pyas .
+deployment:
+  master:
+    branch: master
+    commands:
+      # publish master
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push philipsahli/pyas
