@@ -3,7 +3,7 @@ FROM philipsahli/centos:latest
 RUN yum install -y postgresql-devel python-virtualenv libevent-devel gcc libffi-devel openssl-devel wget tar sudo sqlite-devel make
 
 # Add Custom Python Installation
-RUN curl -O https://www.python.org/ftp/python/2.7.12/Python-2.7.12.tgz && tar -zxf Python-* && cd Python-* && ./configure --prefix=/usr/local --enable-unicode=ucs4 && make && make install && cd .. && rm -rf Python*
+RUN curl -O https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz && tar -zxf Python-* && cd Python-* && ./configure --prefix=/usr/local --enable-unicode=ucs4 && make && make install && cd .. && rm -rf Python*
 
 RUN /usr/local/bin/python -V
 
