@@ -1,6 +1,6 @@
 FROM philipsahli/centos:latest
 
-RUN yum update
+RUN yum update -y
 
 RUN yum install -y postgresql-devel python-virtualenv libevent-devel gcc libffi-devel openssl-devel wget tar sudo sqlite-devel make
 
